@@ -6,7 +6,7 @@ const Movie = ({ movie }) => {
     const poster = movie.Poster === "N/A" ? PLACEHOLDER_IMAGE : movie.Poster;
     return(
         <div className = "movie">
-            <h2>{movie.Title}</h2>
+            
             <div>
                 <img
                     width = '200'
@@ -14,7 +14,9 @@ const Movie = ({ movie }) => {
                     src = {poster}
                 />
             </div>
+            <h2>{movie.Title}</h2>
             <p>({movie.Year})</p>
+            <p>{movie.Ratings}</p>
         </div>
 
     );
